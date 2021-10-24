@@ -1,0 +1,446 @@
+@media(max-width:1750px){
+    .discover{
+        &__img{
+            &:nth-child(1){
+                right: 20px;
+            }
+            &:nth-child(2){
+                right: 50px;
+            }
+            &:nth-child(3){
+                bottom: 16.5%;
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width:1420px){
+    .discover{
+        background-image: url("../img/discover-bg.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        &__background{
+            display: none;
+        }
+        &__wrapper{
+            width: 100%;
+        }
+        &__img{
+            display: none;
+            &:nth-child(1){
+                display: block;
+            }
+        }
+    }
+}
+
+@media(max-width:1320px){
+    .footer{
+        &__menu{
+            width: auto;
+            margin-right: 40px;
+        }
+        &__info{
+            width: auto;
+        }
+    }
+}
+
+@media(max-width:1120px){
+    .header{
+        &__item + &__item{
+            margin-left: 15px;
+        }
+    }
+    .popular{
+        &__box{
+            width: 33.33%;
+        }
+    }
+}
+
+@media(max-width:$tablet){
+    .header{
+        padding: 15px 30px;
+        &__wrapper{
+            flex-wrap: wrap;
+        }
+        &__menu{
+            flex: 100%;
+            margin-top: 15px;
+            order: 3;
+        }
+        &__item + &__item{
+            margin-left: 30px;
+        }
+        &__logo{
+            flex: 30%;
+            order: 1;
+            justify-content: flex-start;
+        }
+        &__links{
+            flex: 70%;
+            order: 2;
+        }
+    }
+    .discover{
+        min-height: auto;
+        z-index: 0;
+        &__wrapper{
+            min-height: auto;
+        }
+        &__img:nth-child(1){
+            display: none;
+        }
+        &__content{
+            width: 100%;
+        }
+        &__text{
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    .recommends,
+    .tours{
+        &__title{
+            margin-bottom: 45px;
+        }
+        &__slider{
+            margin: 0 -15px;
+
+            &-item{
+                padding: 0 15px 60px;
+            }
+        }
+    }
+    .guarantee{
+        &__title{
+            margin-bottom: 45px;
+        }
+        &__content{
+            margin: 0 -15px 15px -15px;
+        }
+        &__box{
+            width: 50%;
+            padding: 0 15px 45px;
+            &-title{
+                width: 75%;
+            }
+            &-img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+    .testimonials{
+        &__img{
+            width: 250px;
+        }
+        &__item{
+            &-comment{
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .popular{
+        &__title{
+            margin-bottom: 45px;
+        }
+        &__content{
+            margin: 0 -15px -45px;
+        }
+        &__box{
+            width: 50%;
+            padding: 0 15px 45px;
+        }
+    }
+    .contact{
+        &__title{
+            margin-bottom: 45px;
+        }
+        &-form{
+            &__middle{
+                margin-bottom: 60px;
+            }
+        }
+    }
+    .footer{
+        margin: 0 30px;
+        &__body{
+            padding: 100px 30px;
+        }
+        &__subscribe{
+            margin: 0 0 60px 0;
+        }
+        &__title{
+            width: 100%;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        &__form{
+            width: 100%;
+            padding: 0;
+        }
+        &__description{
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        &__logo{
+            margin-bottom: 15px;
+        }
+        &__text{
+            padding-right: 0;
+            margin-bottom: 30px;
+        }
+        &__content{
+            width: 100%;
+            margin-top: 0;
+            @include flex-between-wrap;
+        }
+        &__menu{
+            margin-right: 0;
+        }
+    }
+}
+
+@media(max-width:$mobile){
+    .header{
+        padding: 15px;
+    }
+    .plan{
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__text{
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    }
+    .recommends,
+    .tours{
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__slider{
+            &-item{
+                padding-bottom: 40px;
+            }
+            &-img{
+                margin-bottom: 15px;
+            }
+            &-info{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .guarantee{
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__content{
+            margin-bottom: 0px;
+        }
+    }
+    .testimonials{
+        &__img{
+            width: 180px;
+        }
+        &__title{
+            margin-bottom:30px;
+        }
+        &__item{
+            padding-bottom: 40px;
+            &-comment{
+                font-size: 24px;
+            }
+        }
+    }
+    .contact{
+        &__title{
+            margin-bottom: 30px;
+        }
+        &-form{
+            &__top{
+                margin: 0;
+            }
+            &__item{
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+            &__label{
+                margin-bottom: 10px;
+            }
+            &__middle{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .footer{
+        margin: 0 15px;
+        &__body{
+            padding: 60px 15px;
+        }
+        &__title{
+            margin-bottom: 15px;
+        }
+        &__form{
+            &-content{
+                flex-direction: column;
+            }
+            &-input{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        &__menu{
+            width: 50%;
+        }
+        &__content{
+            &-title{
+                margin-bottom: 15px;
+            }
+        }
+        &__info{
+            margin-top: 60px;
+            &-text{
+                margin-bottom: 15px;
+                & br{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:610px){
+    .header{
+        &__logo{
+            flex: 70%;
+            position: relative;
+            z-index: 20;
+        }
+        &__menu{
+            margin-top: 0;
+            flex: 30%;
+            &-btn{
+                display: block;
+                margin-left: auto;
+                transition: .5s;
+                &:hover{
+                    & span{
+                        background-color: $hover-color;
+                        &::after,
+                        &::before{
+                            background-color: $hover-color;
+                        }
+                    }
+                }
+                &.active{
+                    transition: all .7s;
+                    & span{
+                        background-color: inherit;
+                        &::after,
+                        &::before{
+                            background-color: $hover-color;
+                        }
+                        &::after{
+                            transform: rotate(45deg);
+                            top: 0;
+                        }
+                        &::before{
+                            top: 0;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+        .header__items{
+            display: block;
+            transition: all .7s;
+            transform: translateX(-150%);
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0px;
+            right: 0px;
+            margin-top: 0px;
+            padding: 116px 15px 60px;
+            background-color: $primary-color;
+        }
+        .header__items.active{
+            transform: translate(0%); 
+        }
+        &__item{
+            line-height: 1em;
+        }
+        &__item + &__item{
+            margin: 20px 0 0 0;
+        }
+        &__link{
+            font-size: 18px;
+        }
+        &__mobile-menu{
+            margin-top: 40px;
+        }
+        &__mobile-menu > &__inline-btn,
+        &__mobile-menu > &__btn{
+            display: block;
+        }
+        &__btn{
+            margin: 15px 0 0 0;
+        }
+        &__links{
+            display: none;
+        }
+    }
+}
+
+@media(max-width:540px){
+    .plan{
+        &__btns{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__btn-plan{
+            margin: 0 0 15px 0;
+        }
+        &__btn-about{
+            margin: 0;
+        }
+    }
+    .guarantee{
+        &__box{
+            width: 100%;
+            padding-bottom: 30px;
+            &-img{
+                width: 64px;
+                height: 64px;
+                margin-bottom: 15px;
+            }
+        }
+        &__content{
+            margin-bottom: 15px;
+        }
+    }
+    .popular{
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__content{
+            margin: 0 0 -30px;
+        }
+        &__box{
+            width: 100%;
+            padding: 0 0 30px;
+            &-img{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

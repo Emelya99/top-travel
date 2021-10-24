@@ -1,0 +1,183 @@
+$access-color: #102E46;
+$hover-color: #3AACBC;
+$invert-color: #FFF;
+$primary-color: #FFF9ED;
+$secondary-color: #DCF6FD;
+$tablet: 1024px;
+$mobile: 767px;
+
+
+
+%subtitle{
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    color: $hover-color;
+    @media(max-width:$mobile){
+        font-size: 16px;
+    }
+}
+
+%h1-style{
+    font-size: 72px;
+    line-height: 1em;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    @media(max-width:$tablet){
+        font-size: 48px;
+    }
+    @media(max-width:$mobile){
+        font-size: 32px;
+    }
+}
+
+%h2-style{
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    @media(max-width:$tablet){
+        font-size: 38px;
+        line-height: 1.2em;
+    }
+    @media(max-width:$mobile){
+        font-size: 26px;
+    }
+}
+
+%h3-style{
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    @media(max-width:$tablet){
+        font-size: 22px;
+        line-height: 1.2em;
+    }
+    @media(max-width:$mobile){
+        font-size: 20px;
+    }
+}
+
+%h5-style{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+%h6-style{
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+}
+
+%link-style{
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+}
+
+%btn{
+    display: block;
+    width: 180px;
+    text-align: center;
+    padding: 21px 0 24px 0;
+    letter-spacing: -0.04em;
+    border-radius: 5px;
+}
+
+%primary-btn{
+    @extend %btn;
+    color: $invert-color;
+    background-color: $access-color;
+    &:hover{
+        color: $invert-color;
+        background-color: $hover-color;
+    }
+}
+
+%secondary-btn{
+    @extend %btn;
+    color: $access-color;
+    background-color: $secondary-color;
+    &:hover{
+        color: $invert-color;
+        background-color: $hover-color;
+    }
+}
+
+%section-default{
+    margin: 0px 50px 50px 50px;
+    padding: 50px;
+    @media(max-width:$tablet){
+        margin: 0px 30px 30px 30px;
+        padding: 100px 30px;
+    }
+    @media(max-width:$mobile){
+        margin: 0px 15px 15px 15px;
+        padding: 60px 15px;
+    }
+}
+
+%vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 800px;
+    @media(max-width:$tablet){
+        min-height: auto;
+    }
+}
+
+%flex-between-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flex-end-center{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+
+%flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+%flex-column-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex-between-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+%form-input{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    @extend %h5-style;
+    padding: 19px 30px;
+    transition: all 0.5s;
+    &::placeholder{
+        @extend %h5-style;
+    }
+    @media(max-width:$mobile){
+        padding: 19px 15px;
+    }
+}
+
+@mixin flex-between-wrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

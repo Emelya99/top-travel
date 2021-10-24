@@ -1,0 +1,673 @@
+.header{
+    padding: 12px 50px 13px 50px;
+
+    &__wrapper{
+        @extend %flex-between-center;
+    }
+
+    &__menu{
+        flex: 40%;
+        &-btn{
+            display: none;
+            padding: 0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            background-color: inherit;
+            position: relative;
+            z-index: 20;
+            & span{
+                display: block;
+                height: 2px;
+                background-color: $access-color;
+                position: relative;
+                &::after,
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    background-color: $access-color;
+                    left: 0;
+                }
+                &::after{
+                    top: 10px;
+                }
+                &::before{
+                    top: -10px;
+                }
+            }
+        }
+    }
+
+    &__mobile-menu > &__inline-btn,
+    &__mobile-menu > &__btn{
+        display: none;
+    }
+
+    &__items{
+        display: flex;
+    }
+
+    &__item + &__item{
+        margin-left: 21px;
+    }
+
+    &__link{
+        font-weight: 400;
+    }
+
+    &__logo{
+        flex: 20%;
+        @extend %flex-center;
+    }
+
+    &__links{
+        flex: 40%;
+        @extend %flex-end-center;
+    }
+
+    &__inline-btn{
+        color: $hover-color;
+        &:hover{
+            color: $access-color;
+        }
+    }
+    
+    &__btn{
+        @extend %primary-btn;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: 27px;
+    }
+}
+
+
+
+.discover{
+    position: relative;
+    min-height: 900px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__background{
+        position: absolute;
+        z-index: -1;
+        width: 110%;
+        height: 110%;
+        background-image: url("../img/discover-bg.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1270px;
+        width: 1270px;
+        min-height: 800px;
+    }
+
+    &__content{
+        width: 42%;
+        align-self: center;
+    }
+
+    &__images{
+        width: 58%;
+        position: relative;
+    }
+
+    &__img{
+        position: absolute;
+        border-radius: 50%;
+        &:nth-child(1){
+            top: 75px;
+            right: 0;
+        }
+        &:nth-child(2){
+            top: 60px;
+            right: -50px;
+        }
+        &:nth-child(3){
+            bottom: 16.5%;
+            right: -26.8%;
+        }
+        &:nth-child(4){
+            bottom: 80px;
+            left: 48.3%;
+        }
+        &:nth-child(5){
+            bottom: 20.6%;
+            left: 17.2%;
+        }
+        &:nth-child(6){
+            top: 29.3%;
+            left: 17px;
+        }
+    }
+
+    &__title{
+        @extend %h1-style;
+        margin-bottom: 29px;
+    }
+
+    &__text{
+        max-width: 390px;
+        margin-bottom: 61px;
+    }
+
+    &__btn{
+        @extend %primary-btn;
+    }
+}
+
+.plan{
+    background: $primary-color;
+
+    &__wrapper{
+        @extend %vertical-center;
+        max-width: 1050px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__title{
+        @extend %subtitle;
+        margin-bottom: 44px;
+    }
+
+    &__text{
+        @extend %h2-style;
+        margin-bottom: 57px;
+    }
+
+    &__btns{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__btn-plan{
+        @extend %primary-btn;
+        margin: 0 10px;
+    }
+
+    &__btn-about{
+        @extend %secondary-btn;
+        margin: 0 10px;
+    }
+}
+
+.recommends,
+.tours{
+    background: $invert-color;
+
+    &__wrapper{
+        @extend %vertical-center;
+    }
+
+    &__title{
+        @extend %subtitle;
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    &__slider{
+        margin: 0 -25px;
+
+        &-item{
+            padding: 0 25px 68px;
+        }
+        &-img{
+            margin-bottom: 27px;
+        }
+        &-top{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: -5px;
+        }
+        &-rating{
+            display: inline-block;
+	        font-size: 0;
+            margin-right: 20px;
+            & span{
+                padding: 0;
+                font-size: 20px;
+                line-height: 1;
+                color: lightgrey;
+            }
+            & > span:before{
+                content: '★';
+            }
+            & > span.active {
+                color: gold;
+            }
+        }
+        &-date{
+            @extend %h6-style;
+        }
+        &-content{
+            margin-bottom: 15px;
+        }
+        &-title{
+            @extend %h3-style;
+        }
+        &-location{
+            @extend %h6-style;
+        }
+        &-info{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 44px;
+        }
+        &-price{
+            @extend %h3-style;
+            color: $hover-color;
+            margin-right: 13px;
+        }
+        &-person{
+            @extend %h6-style;
+        }
+        &-btn{
+            @extend %primary-btn;
+        }
+    }
+}
+
+.slick{
+    &-dots{
+        display: flex;
+        justify-content: center;
+        
+        .slick-active > button{
+            border: 12px solid $secondary-color;
+        }
+
+        & li > button{
+            font-size: 0;
+            line-height: 0;
+            padding: 0;
+            outline: none;
+            width: 36px;
+            height: 36px;
+            background: $access-color;
+            border: 12px solid $invert-color;
+            border-radius: 50%;
+            margin: 0 3px;
+            cursor: pointer;
+            &:hover{
+                border: 12px solid $secondary-color;
+            }
+        }
+    }
+}
+
+.guarantee{
+    background: $secondary-color;
+
+    &__wrapper{
+        @extend %vertical-center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__text{
+        @extend %subtitle;
+        margin-bottom: 13px;
+    }
+
+    &__title{
+        @extend %h2-style;
+        margin-bottom: 58px;
+    }
+
+    &__content{
+        @extend %flex-between-wrap;
+        margin-bottom: 64px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    &__box{
+        width: 25%;
+        padding: 0 20px;
+        @extend %flex-column-center;
+
+        &-img{
+            width: 128px;
+            height: 128px;
+            margin-bottom: 30px;
+        }
+
+        &-title{
+            @extend %h3-style;
+        }
+    }
+
+    &__btn{
+        @extend %primary-btn;
+    }
+}
+
+.testimonials{
+    background: $primary-color;
+
+    &__wrapper{
+        @extend %vertical-center;
+        max-width: 1080px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__img{
+        margin: 0 auto;
+        max-width: 332px;
+        margin-bottom: 19px;
+    }
+
+    &__title{
+        @extend %subtitle;
+        margin-bottom: 44px;
+    }
+
+    &__slider{
+        margin: 0 -15px;
+    }
+
+    &__item{
+        padding: 0 15px 59px;
+        &-comment{
+            @extend %h2-style;
+            margin-bottom: 45px;
+        }
+        &-info{
+            letter-spacing: -0.04em;
+            & span{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.popular{
+
+    &__wrapper{
+        @extend %vertical-center;
+    }
+
+    &__title{
+        @extend %subtitle;
+        text-align: center;
+        margin-bottom: 64px;
+    }
+
+    &__content{
+        @extend %flex-between-wrap;
+        margin: 0 -25px -61px;
+    }
+
+    &__box{
+        width: 25%;
+        padding: 0 25px 61px;
+        &-img{
+            margin-bottom: 20px;
+        }
+        &-link{
+            @extend %h3-style;
+            & span{
+                @extend %h5-style;
+            }
+        }
+    }
+}
+
+.contact{
+    background: $secondary-color;
+
+    &__wrapper{
+        @extend %vertical-center;
+        margin: 0 auto;
+        max-width: 830px;
+    }
+
+    &__text{
+        @extend %subtitle;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    &__title{
+        @extend %h2-style;
+        text-align: center;
+        margin-bottom: 57px;
+        padding: 0 5%;
+    }
+
+    &-form{
+        &__top{
+            @extend %flex-between-wrap;
+            margin: 0 -15px 27px;
+        }
+        &__item{
+            width: 50%;
+            padding: 0 15px;
+        }
+        &__label{
+            display: block;
+            margin-bottom: 16px;
+            @extend %h6-style;
+        }
+        &__input{
+            @extend %form-input;
+            width: 100%;
+            box-shadow: 0px 8px 20px rgba(27, 27, 27, 0.08);
+            background: $invert-color;
+            color: $access-color;
+            &::placeholder{
+                color: $access-color;
+            }
+            &:focus{
+                box-shadow: none;
+                background: #C6E2EB;
+            }
+        }
+        &__middle{
+            margin-bottom: 70px;
+        }
+        &__bottom{
+            display: flex;
+            justify-content: center;
+        }
+        &__btn{
+            @extend %primary-btn;
+            @extend %link-style;
+            cursor: pointer;
+            border: none;
+            transition: all .5s;
+        }
+    }
+}
+
+.footer{
+    margin: 0 50px;
+
+    &__body{
+        background: $access-color;
+        padding: 166px 50px 170px;
+        color: $invert-color;
+    }
+
+    &__subscribe{
+        @extend %flex-between-wrap;
+        margin: 0px -20px 84px;
+    }
+
+    &__title{
+        width: 42%;
+        padding: 0 20px;
+        @extend %h2-style; 
+    }
+
+    &__form{
+        width:58%;
+        padding: 17px 20px 0px;
+        &-content{
+            display: flex;
+            margin-bottom: 11px;
+        }
+        &-input{
+            width: calc(100% - 180px);
+            @extend %form-input;
+            color: $invert-color;
+            background: rgba(255,255,255,0.1);
+            margin-right: 10px;
+            &::placeholder{
+                color: $invert-color;
+            }
+            &:focus{
+                color: $access-color;
+                background: $invert-color;
+            }
+        }
+        &-btn{
+            @extend %secondary-btn;
+            @extend %link-style;
+            cursor: pointer;
+            border: none;
+            display: inline-block;
+            transition: all .5s;
+        }
+        &-acceptance{
+            @extend %h6-style;
+            & a{
+                @extend %h6-style;
+                text-decoration: underline;
+                font-weight: 400;
+                color: $hover-color;
+                &:hover{
+                    color: $invert-color;
+                }
+            }
+        }
+    }
+
+    &__inner{
+        @extend %flex-between-wrap;
+    }
+
+    &__description{
+        width: 33.33%;
+    }
+
+    &__logo{
+        margin-bottom: 5px;
+    }
+
+    &__text{
+        line-height: 25px;
+        letter-spacing: -0.04em;
+        padding-right: 35px;
+        margin-bottom: 43px;
+    }
+
+    &__social{
+        display: flex;
+        &-item + &-item{
+            margin-left: 30px;
+        }
+        &-link{
+            fill: $invert-color;
+            border: 2px solid transparent;
+            border-width: 0px 0px 2px 0px;
+            padding-bottom: 5px;
+            &:hover{
+                border: 2px solid $invert-color;
+                border-width: 0px 0px 2px 0px;
+            }
+        }
+    }
+
+    &__content{
+        margin-top: 4px;
+        display: flex;
+        &-title{
+            @extend %h5-style;
+            color: $hover-color;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__menu{
+        width: 170px;
+        margin-right: 50px;
+        &-item + &-item{
+            margin-top: 3px;
+        }
+        &-link{
+            @extend %h5-style;
+        }
+    }
+
+    &__info{
+        width: 280px;
+        &-text{
+            line-height: 25px;
+            letter-spacing: -0.04em;
+            margin-bottom: 27px;
+        }
+        &-tel{
+            @extend %h3-style;
+            line-height: 34px;
+            display: block;
+            margin-bottom: -4px;
+        }
+        &-email{
+            @extend %h5-style;
+            text-decoration: underline;
+            color: $hover-color;
+            &:hover{
+                color: $invert-color;
+            }
+        }
+    }
+    &__copyright{
+        padding: 15px 0;
+        min-height: 60px;
+        &-text{
+            font-size: 14px;
+            letter-spacing: -0.04em;
+        }
+    }
+}
+
+#toTop{
+    position: fixed;
+    z-index: 100;
+    right: 50px;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: $access-color;
+    fill: $invert-color;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $hover-color;
+    }
+
+    @media(max-width:$tablet){
+        right: 30px;
+        bottom: 30px;
+    }
+    @media(max-width:$mobile){
+        opacity: 0;
+        visibility: hidden;
+    }
+}
